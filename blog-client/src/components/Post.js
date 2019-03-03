@@ -49,7 +49,7 @@ const Post = props => {
 
   return (
     <section className="post-container">
-      <div className="title">
+      <div className="post-info">
         {isEditing ? (
           <input
             type="text"
@@ -61,61 +61,61 @@ const Post = props => {
         ) : (
           <h2>{post.title}</h2>
         )}
-        <div className="buttons">
-          {isEditing ? (
-            <button
-              onClick={() => {
-                updatePost({ title: title, contents: contents });
-                setIsEditing(false);
-              }}
-              className="btn-check"
-            >
-              &#10004;
-            </button>
-          ) : (
-            <button
-              onClick={e => {
-                e.preventDefault();
-                setIsEditing(true);
-              }}
-            >
-              Δ
-            </button>
-          )}
-          {isEditing ? (
-            <button
-              onClick={e => {
-                e.preventDefault();
-                setIsEditing(false);
-                setContents(post.contents);
-              }}
-            >
-              Ø
-            </button>
-          ) : (
-            <button
-              onClick={() => {
-                deletePost();
-                showPosts();
-              }}
-            >
-              X
-            </button>
-          )}
-        </div>
+        {isEditing ? (
+          <textarea
+            name="contents"
+            className="textarea-contents"
+            cols="90"
+            rows="10"
+            value={contents}
+            onChange={e => setContents(e.target.value)}
+          />
+        ) : (
+          <p>{post.contents}</p>
+        )}
       </div>
-      {isEditing ? (
-        <textarea
-          name="contents"
-          className="textarea-contents"
-          cols="90"
-          rows="10"
-          value={contents}
-          onChange={e => setContents(e.target.value)}
-        />
-      ) : (
-        <p>{post.contents}</p>
-      )}
+      <div className="buttons">
+        {isEditing ? (
+          <button
+            onClick={() => {
+              updatePost({ title: title, contents: contents });
+              setIsEditing(false);
+            }}
+            className="btn-check"
+          >
+            &#10004;
+          </button>
+        ) : (
+          <button
+            onClick={e => {
+              e.preventDefault();
+              setIsEditing(true);
+            }}
+          >
+            Δ
+          </button>
+        )}
+        {isEditing ? (
+          <button
+            onClick={e => {
+              e.preventDefault();
+              setIsEditing(false);
+              setContents(post.contents);
+            }}
+          >
+            Ø
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              deletePost();
+              showPosts();
+            }}
+          >
+            X
+          </button>
+        )}
+      </div>
     </section>
   );
 };

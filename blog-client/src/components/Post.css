@@ -1,6 +1,11 @@
-.post-container .title {
+.post-container {
   display: flex;
   justify-content: space-between;
+}
+
+.post-container .post-info {
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .post-container .buttons {
