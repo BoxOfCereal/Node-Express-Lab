@@ -55,7 +55,7 @@ const PostForm = props => {
           >
             &#10004;
           </button>
-          <button>Ø</button>
+          <button onClick={showPosts}>Ø</button>
         </div>
       </form>
     </section>
