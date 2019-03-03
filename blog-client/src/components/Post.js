@@ -95,6 +95,7 @@ const Post = props => {
             Δ
           </button>
         )}
+        <button onClick={showPosts}>˂</button>
         {isEditing ? (
           <button
             onClick={e => {
