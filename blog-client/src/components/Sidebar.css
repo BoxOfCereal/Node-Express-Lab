@@ -5,6 +5,7 @@
   font-variant: normal;
   font-weight: 700;
   line-height: 2.1rem;
+  margin-bottom: 8px;
 }
 
 .sidebar h1::before {
