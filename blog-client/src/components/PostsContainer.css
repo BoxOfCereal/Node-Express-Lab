@@ -4,3 +4,28 @@
   grid-auto-rows: minmax(200px, auto);
   grid-gap: 25px;
 }
+
+.loading-container {
+  font-size: 20rem;
+  position: relative;
+  margin: 0 auto;
+  /* start in middle column */
+  grid-column-start: 2;
+  animation: rotating 8s linear infinite;
+  padding: 0px;
+  transform-origin: 0% 54%;
+}
+
+.loading-container p {
+  font-size: 2rem;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter",
+    "Lucida Typewriter", monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  position: absolute;
+  top: 170px;
+  left: -70px;
+}

@@ -7,6 +7,18 @@
   line-height: 2.1rem;
 }
 
+.sidebar h1::before {
+  content: "҉҉";
+  font-size: 5rem;
+  position: relative;
+  display: inline-block;
+  line-height: 1.3rem;
+  animation: rotating 8s linear infinite;
+  transform-origin: 0% 97%;
+  left: 28px;
+  top: 7px;
+}
+
 li {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", monospace;
@@ -18,4 +30,20 @@ li {
 }
 li:hover {
   cursor: pointer;
+}
+@keyframes rotating {
+  from {
+    ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }

@@ -27,7 +27,9 @@ const PostsContainer = props => {
     <div className="posts-container">
       {console.log(posts)}
       {!posts.length ? (
-        <p className="loading-message">LOADING</p>
+        <div className="loading-container">
+          ҉҉<p>LOADING</p>
+        </div>
       ) : (
         posts.map(post => (
           <PostCard key={post.id} {...post} clickHandler={clickHandler} />
