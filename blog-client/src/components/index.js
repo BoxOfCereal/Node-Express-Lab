@@ -5,3 +5,4 @@ export { default as PostsContainer } from "./PostsContainer.js";
 export { default as PostCard } from "./PostCard.js";
 export { default as Post } from "./Post.js";
 export { default as PostForm } from "./PostForm.js";
+export { default as Sig } from "./Sig.js";
