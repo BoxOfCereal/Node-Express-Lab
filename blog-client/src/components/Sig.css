@@ -1,0 +1,14 @@
+.signature {
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 3.9rem;
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+  background: url("../gifs/water.gif");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
